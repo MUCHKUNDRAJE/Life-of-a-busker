@@ -93,13 +93,14 @@ nav{
    background-position: center;
    background-size: cover;
    position: relative;
+   /* filter:contrast(101%); */
 }
 #page1 img{
     position: absolute;
     height: 100%;
     width: 100%;
     object-fit: cover;
-    opacity: 0.03;
+    opacity: 0.02;
 }
 #page1 h1{
 position: absolute;
@@ -188,8 +189,23 @@ position: relative;
 }
 #page4{
     width: 100%;
-    height: 100vh;
-    background-color: #29221D;
+    min-height: 150vh;
+    background-image: url("6434092a1f92be428212c339_A\ Place\ to\ Call\ Home\ -\ bg.jpg");
+    background-color: rgba(0, 0, 0, 0.2); /* Change to black with opacity */
+    /* background-blend-mode: multiply;  */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+#page4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(36, 36, 36, 0.393); /* Adjust opacity as needed */
 }
 #photoslider{
 width: 400px;
@@ -207,4 +223,39 @@ overflow: hidden;
     height: 100%;
     object-fit: cover;
     margin-top: 0px;
+}
+#overlay{
+    height: 400px;
+    width: 100%;
+    background-color: #29221D;
+    /* border: 1px solid red; */
+    /* z-index: 1000; */
+    position: relative;
+    top: 50%; 
+   left: 50%;
+  transform: translate(-50%, 0%) scaleY(1);
+}
+#overlay h1:hover #overlay{
+  transform: translate(-50%, 0%) scaleY(0);
+    
+}
+#overlay h1{
+    /* width: 100px;
+    height: 100px; */
+    /* background-color: #fff; */
+}
+#overlay2 h1 {
+ width: 50%;
+ /* background-color: #F1EEEC; */
+ font-size: 10vw;
+ font-weight: 100;
+}
+#overlay2{
+       height: 400px;
+    width: 100%;
+    background-color: transparent;
+ position: absolute;
+ color: #fff;;
+ z-index: 99999;
+    
 }
